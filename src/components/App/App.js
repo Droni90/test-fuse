@@ -9,7 +9,8 @@ function App() {
   useEffect(() => {
     fetch("https://603e38c548171b0017b2ecf7.mockapi.io/homes")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => setData(data))
+      .catch((e) => console.log(e));
   }, []);
 
   const handleFilter = (evt) => {
